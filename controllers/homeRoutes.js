@@ -9,8 +9,10 @@ router.get('/', async (req, res) => {
 				model: User,
 				attributes: ['username'],
 			},],
+            
 		});
 
+        console.log(blogData)
 		const blogs = blogData.map((blog) => blog.get({
 			plain: true
 		}));
